@@ -5,6 +5,11 @@ Les fichiers HTML sont executé par OBS sur la source brother Web et donc le cod
 Je ne suis pas sur de mettre a jour les fichiers mais je laisse la méthode et le code libre d'exploitation
 Vous pouvez choisir d'afficher la date seukement, l'heure seulement ou les deux vu que j'ai scindé le code sur 2 parties avec 1 fichier qui renvoie chaque fonction date ou heure
 
+La date est au format "Jour J Mois Date" et les dates au formats :
+
+- 00:00 pour le fichier 1.0
+- 0h0 pour le fichier 2.0
+
 Voici le process en images sur OBS : 
 
 -selection de source navigateur Web
@@ -22,3 +27,8 @@ Voici le process en images sur OBS :
 -Validation des paramètres apperçu dans la fenêtre
 
 ![image](https://github.com/Dark-Edge/Date.heure-en-FR-sur-Twitch/assets/6528375/cda56785-0293-4dac-98ee-1310299dbe2f)
+
+
+Problèmes connus : 
+
+- Les formats sont midifiable même si il faut connaître un minimum mais pour l'heure j'ai laissé la première version car le 2e fichier n'affiche pas systématiquement les 2 digits
