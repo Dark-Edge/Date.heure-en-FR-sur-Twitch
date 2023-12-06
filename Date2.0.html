@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=utf-8"/>
+  <title>A simple clock</title>
+
+</head>
+<!-- onload arg is here to run the function and refresh it --> 
+<body onload="startTime()" translate="no" >
+  <div id="output" 
+       style=	"display: inline-block;
+		font-family: monospace;
+		font-size: 30px;
+		text-align: center;
+		color: lightgray; 
+		border-radius: 10px; 
+		padding: 10px; 
+		background-color: rgba(0, 0, 0, 0.45);">
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+  <script>
+//On crée une date
+let date1 = new Date();
+
+let dateLocale = date1.toLocaleString('fr-FR',{
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'});
+
+document.getElementById('output').innerHTML = dateLocale;
+
+function startTime() {
+let date1 = new Date();
+
+let dateLocale = date1.toLocaleString('fr-FR',{
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'});
+
+document.getElementById('output').innerHTML = dateLocale;
+
+}
+  </script>
+</body>
+</html>
