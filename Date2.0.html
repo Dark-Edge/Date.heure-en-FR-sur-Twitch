@@ -24,13 +24,19 @@
 let date1 = new Date();
 
 let dateLocale = date1.toLocaleString('fr-FR',{
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'});
+    weekday: 'long',   // choose between args'long' (written word) or 'numeric' (00)  || les arguments sont 'long' (mot écrit) ou 'numéric' (00)
+    year: 'numeric',   // choose between args'long' (written word) or 'numeric' (00)  || les arguments sont 'long' (mot écrit) ou 'numéric' (00)
+    month: 'long',   // choose between args'long' (written word) or 'numeric' (00)  || les arguments sont 'long' (mot écrit) ou 'numéric' (00)
+    day: 'numeric'});   // choose between args'long' (written word) or 'numeric' (00)  || les arguments sont 'long' (mot écrit) ou 'numéric' (00)
+
+// il existe d'autre nominateurs comme: "hour: 'arg'," ; "minute: 'arg'," ; "second: 'arg', ect... pour plus d'infos il faut se renseigner sur les timezones"
+// there are some other things to specify: "hour: 'arg'," ; "minute: 'arg'," ; "second: 'arg', ect... check timezones on google for more informations"	  
 
 document.getElementById('output').innerHTML = dateLocale;
+// line code for display output date || ligne qui va afficher la date selon le format pré-défini
 
+// pourquoi c'est écrit deux fois? ben une fois pour la première execution et la seconde fois dans la fonction onload ça permet d'éviter d'attendre quelques secondes pour l'affichage
+// code is doubled  
 function startTime() {
 let date1 = new Date();
 
@@ -41,7 +47,7 @@ let dateLocale = date1.toLocaleString('fr-FR',{
     day: 'numeric'});
 
 document.getElementById('output').innerHTML = dateLocale;
-
+// line code for display output date || ligne qui va afficher la date selon le format pré-défini
 }
   </script>
 </body>
