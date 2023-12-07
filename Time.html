@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=utf-8"/> <!-- on spécifie l'encodage pour adier la fonction a intégrer un language  || spec enconding for languages in function--> 
   <title>A simple clock</title>
 
 </head>
 
-<body translate="no" >
+<body translate="no" >  <!-- no translate beacause the format display won't modulate with timezones  ||  pas de trad car la timezone change pas et le reste c'est le fonc en CSS--> 
   <div id="output" 
        style=	"display: inline-block;
 		font-family: monospace;
@@ -24,7 +24,7 @@
 var urlParams;
 (function () {
     var match,
-        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space || ça renvoie le format avec une petite mise en page car par défaut tout est collé
         search = /([^&=]+)=?([^&]*)/g,
         decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
         query  = window.location.search.substring(1);
@@ -39,7 +39,7 @@ var c;
 setInterval(
 c = function() {
 	output.innerText = moment().format(urlParams["format"] || 'HH:mm');
-//    output.innerText = moment().format(urlParams["format"] || '');
+//    output.innerText = moment().format(urlParams["format"] || '');  ligne qui renvoie l'afichage soous format DDDD/MMMM/AAAA HH:mm pour plus d'infos il faut rechercher les format de dates
 }, 1000);
 c();
   </script>
